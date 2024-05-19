@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ts_to_exes on My New Hugo Site</title>
+    <link>https://jowi-dev.github.io/ts_to_ex/</link>
+    <description>Recent content in Ts_to_exes on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+      <language>en-us</language><atom:link href="https://jowi-dev.github.io/ts_to_ex/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://jowi-dev.github.io/ts_to_ex/00_intro/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+
+      <guid>https://jowi-dev.github.io/ts_to_ex/00_intro/</guid>
+      <description>Preface TODO - LINKS This series is both my introductory exploration into writing (bare with me), and an effort to help curious JavaScript(JS) or TypeScript(TS) developers bridge the gap to other syntactic families. Although the examples will be mostly in JS/TS, I hope this can provide reference to any engineer who has worked in a C-style language (JS/TS/C/C++/Java/C#), but wants to explore other horizons.
+I&amp;rsquo;d also like to call out, in varying degrees of necessity, that I won&amp;rsquo;t be bashing C-style languages in any capacity; I LOVE JS, I think Bun will make it the defacto single threaded language soon enough, and I frequently reach for it over any scripting language for its ease of use, intuitiveness, and versatility.</description>
+      <content>
+&lt;h1 id=&#34;preface-todo---links&#34;&gt;
+  Preface TODO - LINKS
+  &lt;a href=&#34;#preface-todo---links&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;This series is both my introductory exploration into writing (bare with me), and an effort to help curious JavaScript(JS) or TypeScript(TS) developers bridge the gap to other syntactic families. Although the examples will be mostly in JS/TS, I hope this can provide reference to any engineer who has worked in a C-style language (JS/TS/C/C++/Java/C#), but wants to explore other horizons.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;d also like to call out, in varying degrees of necessity, that I won&amp;rsquo;t be bashing C-style languages in any capacity; I LOVE JS, I think Bun will make it the defacto single threaded language soon enough, and I frequently reach for it over any scripting language for its ease of use, intuitiveness, and versatility.&lt;/p&gt;
+
+&lt;h1 id=&#34;why-elixir---todo---links&#34;&gt;
+  Why Elixir? - TODO - LINKS
+  &lt;a href=&#34;#why-elixir---todo---links&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;I learned about elixir fairly early into my career, while working as a JavaScript/C# developer doing full-stack development. What drew me to elixir originally was how different it was, and how performant it seemed to be in a multi-threaded context. At that point in my career I was searching for &amp;ldquo;one language to rule them all&amp;rdquo;, or more simply put a language that I could use for everything. To me, everything meant:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A language I could use server-side, preferably with an ORM comparable to entity framework, with the ability to spawn multiple threads&lt;/li&gt;
+&lt;li&gt;A language I could use client side without having a user experience banished to the early days of the internet.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;.NET/MVC at that point had, and maybe still has, an ORM that was so flexible I really never felt it necessary to reach for raw sql. What it lacked was a better templating system. LiveView was that better templating system, offering reactivity and interaction akin to React, Vue, or Angular, without the productivity hit of switching back and forth between apps.&lt;/p&gt;
+&lt;p&gt;Finally, elixir just seemed fun. I try to balance all of my tech decisions between &lt;code&gt;What is actually a good engineering decision&lt;/code&gt; vs &lt;code&gt;what am I going to enjoy working on?&lt;/code&gt; This admittedly is less than total idealism from an engineering perspective, but if we&amp;rsquo;re going to spend this many hours hacking, building, debugging, its important to at least &lt;em&gt;somewhat&lt;/em&gt; enjoy it.&lt;/p&gt;
+&lt;p&gt;There&amp;rsquo;s a boatload of other languages out there, I encourage you to try as many different ideas as possible, as it will give you new perspectives and ideas that you can bring along with you forever. The Ralph Waldo Emerson quote frequently rings in my head:&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;The mind, once stretched by a new idea, never returns to its original dimensions.&amp;rdquo;&lt;/p&gt;
+
+&lt;h1 id=&#34;structure-of-this-series&#34;&gt;
+  Structure of this series
+  &lt;a href=&#34;#structure-of-this-series&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;Elixir is not only different from JavaScript in syntax but also in approach; my aim is to show you both syntactic equivalents, but also idiomatic equivalents. Ideas like anonymous functions exist in elixir, but are not used as liberally as they are in elixir. I will do my best to show equivalents, and explain WHY it is that way, so you can be equipped to reference syntax and ideas when working in an elixir code base.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ll also aim to keep articles on the shorter side so they can be easily referenced. If these notes are open on a second screen while writing code, I&amp;rsquo;ve done my job.&lt;/p&gt;
+
+&lt;h1 id=&#34;setup---todo---links&#34;&gt;
+  Setup - TODO - LINKS
+  &lt;a href=&#34;#setup---todo---links&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;I&amp;rsquo;m going to point you to ASDF, the elixir language website, or anything that is not me for setup; setup instructions inevitably go out of sync with reality, and I don&amp;rsquo;t want to create a maintenance nightmare in the form of a markdown document.&lt;/p&gt;
+
+&lt;h1 id=&#34;running-the-examples&#34;&gt;
+  Running the Examples
+  &lt;a href=&#34;#running-the-examples&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;To run these examples yourself - I would recommend installing &lt;code&gt;bun&lt;/code&gt; (TODO LINK) for the typescript examples, and &lt;code&gt;elixir&lt;/code&gt; for the elixir ones. Once they are installed, you should be able to experiment with them by using either:&lt;/p&gt;
+
+&lt;h3 id=&#34;typescript&#34;&gt;
+  TypeScript
+  &lt;a href=&#34;#typescript&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h3&gt;
+
+&lt;div class=&#34;highlight-wrapper&#34;&gt;
+  &lt;div class=&#34;highlight-toolbar&#34;&gt;
+    &lt;span class=&#34;item&#34;&gt;
+      &lt;span class=&#34;label&#34;&gt;Lang:&lt;/span&gt;
+      &lt;span class=&#34;name&#34;&gt;bash&lt;/span&gt;
+    &lt;/span&gt;
+
+
+    &lt;button class=&#34;item right outline brighter hide js-btn-copy-code&#34;&gt;Copy&lt;/button&gt;
+  &lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;bun repl&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&#34;elixir&#34;&gt;
+  Elixir
+  &lt;a href=&#34;#elixir&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h3&gt;
+
+&lt;div class=&#34;highlight-wrapper&#34;&gt;
+  &lt;div class=&#34;highlight-toolbar&#34;&gt;
+    &lt;span class=&#34;item&#34;&gt;
+      &lt;span class=&#34;label&#34;&gt;Lang:&lt;/span&gt;
+      &lt;span class=&#34;name&#34;&gt;bash&lt;/span&gt;
+    &lt;/span&gt;
+
+
+    &lt;button class=&#34;item right outline brighter hide js-btn-copy-code&#34;&gt;Copy&lt;/button&gt;
+  &lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;iex&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Recommending Bun for the TypeScript side of things because (AFAIK) the node repl is JavaScript only without a transpiler, while the &lt;code&gt;bun repl&lt;/code&gt; command will run TypeScript natively.&lt;/p&gt;
+
+&lt;h1 id=&#34;conclusion&#34;&gt;
+  Conclusion
+  &lt;a href=&#34;#conclusion&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;I&amp;rsquo;m bad at goodbyes, so how about we get started?&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;01_assignment_statements&#34;&gt;Assignments&lt;/a&gt;&lt;/p&gt;
+</content>
+    </item>
+    <item>
+      <title></title>
+      <link>https://jowi-dev.github.io/ts_to_ex/01_assignment_statements/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+
+      <guid>https://jowi-dev.github.io/ts_to_ex/01_assignment_statements/</guid>
+      <description>Assignments JavaScript let assignment Starting out with the basics, lets take a look at assigning values to variables. In JavaScript that&amp;rsquo;s going to look like:
+Lang: typescript Copy let val : number = 5; Elixir has a slightly more direct version:
+Lang: elixir Copy val = 5 few notes
+no keyword for variable declarations in elixir - in this case let no type options for declaring variables - it is ALWAYS(mostly) an implicit declaration no semi-colons JavaScript const assignment In JavaScript, if you want a variable to stay the same value, slap a const keyword on it:</description>
+      <content>
+&lt;h1 id=&#34;assignments&#34;&gt;
+  Assignments
+  &lt;a href=&#34;#assignments&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h1&gt;
+
+&lt;h2 id=&#34;javascript-let-assignment&#34;&gt;
+  JavaScript &lt;code&gt;let&lt;/code&gt; assignment
+  &lt;a href=&#34;#javascript-let-assignment&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Starting out with the basics, lets take a look at assigning values to variables. In JavaScript that&amp;rsquo;s going to look like:&lt;/p&gt;
+
+&lt;div class=&#34;highlight-wrapper&#34;&gt;
+  &lt;div class=&#34;highlight-toolbar&#34;&gt;
+    &lt;span class=&#34;item&#34;&gt;
+      &lt;span class=&#34;label&#34;&gt;Lang:&lt;/span&gt;
+      &lt;span class=&#34;name&#34;&gt;typescript&lt;/span&gt;
+    &lt;/span&gt;
+
+
+    &lt;button class=&#34;item right outline brighter hide js-btn-copy-code&#34;&gt;Copy&lt;/button&gt;
+  &lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-typescript&#34; data-lang=&#34;typescript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;let&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;val&lt;/span&gt; : &lt;span style=&#34;color:#66d9ef&#34;&gt;number&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Elixir has a slightly more direct version:&lt;/p&gt;
+
+&lt;div class=&#34;highlight-wrapper&#34;&gt;
+  &lt;div class=&#34;highlight-toolbar&#34;&gt;
+    &lt;span class=&#34;item&#34;&gt;
+      &lt;span class=&#34;label&#34;&gt;Lang:&lt;/span&gt;
+      &lt;span class=&#34;name&#34;&gt;elixir&lt;/span&gt;
+    &lt;/span&gt;
+
+
+    &lt;button class=&#34;item right outline brighter hide js-btn-copy-code&#34;&gt;Copy&lt;/button&gt;
+  &lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elixir&#34; data-lang=&#34;elixir&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;val &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;few notes&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;no keyword for variable declarations in elixir - in this case &lt;code&gt;let&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;no type options for declaring variables - it is ALWAYS(mostly) an implicit declaration&lt;/li&gt;
+&lt;li&gt;no semi-colons&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;javascript-const-assignment&#34;&gt;
+  JavaScript &lt;code&gt;const&lt;/code&gt; assignment
+  &lt;a href=&#34;#javascript-const-assignment&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;In JavaScript, if you want a variable to stay the same value, slap a &lt;code&gt;const&lt;/code&gt; keyword on it:&lt;/p&gt;
+
+&lt;div class=&#34;highlight-wrapper&#34;&gt;
+  &lt;div class=&#34;highlight-toolbar&#34;&gt;
+    &lt;span class=&#34;item&#34;&gt;
+      &lt;span class=&#34;label&#34;&gt;Lang:&lt;/span&gt;
+      &lt;span class=&#34;name&#34;&gt;typescript&lt;/span&gt;
+    &lt;/span&gt;
+
+
+    &lt;button class=&#34;item right outline brighter hide js-btn-copy-code&#34;&gt;Copy&lt;/button&gt;
+  &lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-typescript&#34; data-lang=&#34;typescript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;val&lt;/span&gt; : &lt;span style=&#34;color:#66d9ef&#34;&gt;number&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Elixir:&lt;/p&gt;
+
+&lt;div class=&#34;highlight-wrapper&#34;&gt;
+  &lt;div class=&#34;highlight-toolbar&#34;&gt;
+    &lt;span class=&#34;item&#34;&gt;
+      &lt;span class=&#34;label&#34;&gt;Lang:&lt;/span&gt;
+      &lt;span class=&#34;name&#34;&gt;elixir&lt;/span&gt;
+    &lt;/span&gt;
+
+
+    &lt;button class=&#34;item right outline brighter hide js-btn-copy-code&#34;&gt;Copy&lt;/button&gt;
+  &lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elixir&#34; data-lang=&#34;elixir&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;val &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&#34;wait-what&#34;&gt;
+  Wait, What?
+  &lt;a href=&#34;#wait-what&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;Yep. You&amp;rsquo;re reading that correctly - elixir has the same declaration no matter what. The reasoning for this is &lt;em&gt;all&lt;/em&gt; variables in elixir are immutable i.e. they can&amp;rsquo;t be changed, or this is what is advertised. Ergonomically variables in elixir will function similar to how &lt;code&gt;let&lt;/code&gt; works in JavaScript, but behind the scenes elixir makes a copy of a variable, discards the old value, and assigns the new one. This alleviates mutability concerns, but won&amp;rsquo;t give you the familiar interpreter errors you&amp;rsquo;re using to seeing with &lt;code&gt;const&lt;/code&gt;. Let me see if I can hack together an example:&lt;/p&gt;
+
+&lt;div class=&#34;highlight-wrapper&#34;&gt;
+  &lt;div class=&#34;highlight-toolbar&#34;&gt;
+    &lt;span class=&#34;item&#34;&gt;
+      &lt;span class=&#34;label&#34;&gt;Lang:&lt;/span&gt;
+      &lt;span class=&#34;name&#34;&gt;elixir&lt;/span&gt;
+    &lt;/span&gt;
+
+
+    &lt;button class=&#34;item right outline brighter hide js-btn-copy-code&#34;&gt;Copy&lt;/button&gt;
+  &lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elixir&#34; data-lang=&#34;elixir&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;val &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;val &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; val &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;#discards the old version of `val`, and creates a new variable named `val` with a value of 6&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;I&amp;rsquo;ve seen this described as &lt;code&gt;labeling&lt;/code&gt; by some internet strangers, i.e. the label &lt;code&gt;val&lt;/code&gt; represents the number &lt;code&gt;5&lt;/code&gt;, then the label &lt;code&gt;val&lt;/code&gt; represents the number &lt;code&gt;6&lt;/code&gt; after the second assignment. YMMV, my recommendation is to keep it simple and think about it however fits.&lt;/p&gt;
+
+&lt;h1 id=&#34;conclusion&#34;&gt;
+  Conclusion
+  &lt;a href=&#34;#conclusion&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h1&gt;
+&lt;p&gt;Not much to see here. Lets move into each language&amp;rsquo;s type system to get an idea of what all can be assigned to a variable.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;02_basic_types&#34;&gt;Basic Types&lt;/a&gt;&lt;/p&gt;
+</content>
+    </item>
+    <item>
+      <title></title>
+      <link>https://jowi-dev.github.io/ts_to_ex/02_basic_types/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+
+      <guid>https://jowi-dev.github.io/ts_to_ex/02_basic_types/</guid>
+      <description> TODO </description>
+      <content>
+&lt;h1 id=&#34;todo&#34;&gt;
+  TODO
+  &lt;a href=&#34;#todo&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h1&gt;
+</content>
+    </item>
+    <item>
+      <title></title>
+      <link>https://jowi-dev.github.io/ts_to_ex/03_functions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+
+      <guid>https://jowi-dev.github.io/ts_to_ex/03_functions/</guid>
+      <description>Public, Private, Anonymous Functions Public Functions TypeScript Functional Form Lang: TypeScript Copy export function addOne(num : number): number { return num + 1; } // called via addOne(1) Object-Oriented Form Lang: TypeScript Copy class numMutator { static addOne(num: number) : number { return num + 1; } } // called via numMutator.addOne(1); Elixir Notable Differences There are a few distinct differences between the TypeScript world and the Elixir world of functions.</description>
+      <content>
+&lt;h1 id=&#34;public-private-anonymous-functions&#34;&gt;
+  Public, Private, Anonymous Functions
+  &lt;a href=&#34;#public-private-anonymous-functions&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h1&gt;
+
+&lt;h2 id=&#34;public-functions&#34;&gt;
+  Public Functions
+  &lt;a href=&#34;#public-functions&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h2&gt;
+
+&lt;h3 id=&#34;typescript&#34;&gt;
+  TypeScript
+  &lt;a href=&#34;#typescript&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h3&gt;
+
+&lt;h4 id=&#34;functional-form&#34;&gt;
+  Functional Form
+  &lt;a href=&#34;#functional-form&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h4&gt;
+
+&lt;div class=&#34;highlight-wrapper&#34;&gt;
+  &lt;div class=&#34;highlight-toolbar&#34;&gt;
+    &lt;span class=&#34;item&#34;&gt;
+      &lt;span class=&#34;label&#34;&gt;Lang:&lt;/span&gt;
+      &lt;span class=&#34;name&#34;&gt;TypeScript&lt;/span&gt;
+    &lt;/span&gt;
+
+
+    &lt;button class=&#34;item right outline brighter hide js-btn-copy-code&#34;&gt;Copy&lt;/button&gt;
+  &lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-TypeScript&#34; data-lang=&#34;TypeScript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;export&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;addOne&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;num&lt;/span&gt; : &lt;span style=&#34;color:#66d9ef&#34;&gt;number&lt;/span&gt;)&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;number&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;num&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// called via
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;addOne&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;object-oriented-form&#34;&gt;
+  Object-Oriented Form
+  &lt;a href=&#34;#object-oriented-form&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h4&gt;
+
+&lt;div class=&#34;highlight-wrapper&#34;&gt;
+  &lt;div class=&#34;highlight-toolbar&#34;&gt;
+    &lt;span class=&#34;item&#34;&gt;
+      &lt;span class=&#34;label&#34;&gt;Lang:&lt;/span&gt;
+      &lt;span class=&#34;name&#34;&gt;TypeScript&lt;/span&gt;
+    &lt;/span&gt;
+
+
+    &lt;button class=&#34;item right outline brighter hide js-btn-copy-code&#34;&gt;Copy&lt;/button&gt;
+  &lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-TypeScript&#34; data-lang=&#34;TypeScript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;numMutator&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;static&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;addOne&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;num&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;number&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;number&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	  &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;num&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// called via
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;numMutator&lt;/span&gt;.&lt;span style=&#34;color:#a6e22e&#34;&gt;addOne&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&#34;elixir&#34;&gt;
+  Elixir
+  &lt;a href=&#34;#elixir&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h3&gt;
+
+&lt;h4 id=&#34;notable-differences&#34;&gt;
+  Notable Differences
+  &lt;a href=&#34;#notable-differences&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h4&gt;
+&lt;p&gt;There are a few distinct differences between the TypeScript world and the Elixir world of functions. First and foremost the keyword differences. We use &lt;code&gt;def&lt;/code&gt; to &lt;code&gt;define&lt;/code&gt; a public function, and instead of braces we say &lt;code&gt;do/end&lt;/code&gt; to describe the contents of the body.&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;@spec&lt;/code&gt; is another oddity in elixir; it is our attempt at describing types. rather than cluttering a function declaration with typing, in effect we move it to the line above as a description. a &lt;code&gt;@spec&lt;/code&gt; is read relatively simply as:&lt;/p&gt;
+
+&lt;div class=&#34;highlight-wrapper&#34;&gt;
+  &lt;div class=&#34;highlight-toolbar&#34;&gt;
+    &lt;span class=&#34;item&#34;&gt;
+      &lt;span class=&#34;label&#34;&gt;Lang:&lt;/span&gt;
+      &lt;span class=&#34;name&#34;&gt;elixir&lt;/span&gt;
+    &lt;/span&gt;
+
+
+    &lt;button class=&#34;item right outline brighter hide js-btn-copy-code&#34;&gt;Copy&lt;/button&gt;
+  &lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elixir&#34; data-lang=&#34;elixir&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@spec&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;$&lt;/span&gt;function_name(&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;$&lt;/span&gt;param1_type, &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;$&lt;/span&gt;param2_type, ...) &lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt; &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;$&lt;/span&gt;return_type&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Ergonomically, my biggest hurdle in the elixir world was the lack of &lt;code&gt;return&lt;/code&gt; as a keyword. I &lt;em&gt;hated&lt;/em&gt; it when I started, but have grown to appreciate the way it drives control flow. In elixir we return the final line from a function as its return value. In the following examples, the result of the addition operator is returned implicitly to the caller. This is a pretty big divorce from the C-style &lt;code&gt;if(err) return;&lt;/code&gt; control flow used to break out of functions early, but I&amp;rsquo;ll touch on that in a future section (TODO - LINK TO CONTROL FLOW SECTION)&lt;/p&gt;
+
+&lt;h4 id=&#34;standard-form&#34;&gt;
+  Standard Form
+  &lt;a href=&#34;#standard-form&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h4&gt;
+
+&lt;div class=&#34;highlight-wrapper&#34;&gt;
+  &lt;div class=&#34;highlight-toolbar&#34;&gt;
+    &lt;span class=&#34;item&#34;&gt;
+      &lt;span class=&#34;label&#34;&gt;Lang:&lt;/span&gt;
+      &lt;span class=&#34;name&#34;&gt;Elixir&lt;/span&gt;
+    &lt;/span&gt;
+
+
+    &lt;button class=&#34;item right outline brighter hide js-btn-copy-code&#34;&gt;Copy&lt;/button&gt;
+  &lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-Elixir&#34; data-lang=&#34;Elixir&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@spec&lt;/span&gt; addOne(integer()) &lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt; integer()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; addOne(num) &lt;span style=&#34;color:#66d9ef&#34;&gt;do&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  num &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# called via&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;addOne(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;one-liner&#34;&gt;
+  One Liner
+  &lt;a href=&#34;#one-liner&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h4&gt;
+
+&lt;div class=&#34;highlight-wrapper&#34;&gt;
+  &lt;div class=&#34;highlight-toolbar&#34;&gt;
+    &lt;span class=&#34;item&#34;&gt;
+      &lt;span class=&#34;label&#34;&gt;Lang:&lt;/span&gt;
+      &lt;span class=&#34;name&#34;&gt;elixir&lt;/span&gt;
+    &lt;/span&gt;
+
+
+    &lt;button class=&#34;item right outline brighter hide js-btn-copy-code&#34;&gt;Copy&lt;/button&gt;
+  &lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elixir&#34; data-lang=&#34;elixir&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@spec&lt;/span&gt; addOne(integer()) &lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt; integer()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; addOne(num), &lt;span style=&#34;color:#e6db74&#34;&gt;do&lt;/span&gt;: num &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# called via&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;addOne(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&#34;private-functions&#34;&gt;
+  Private Functions
+  &lt;a href=&#34;#private-functions&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;I&amp;rsquo;ll save the word count in this section, as it has very minor differences from the public function section from above.&lt;/p&gt;
+
+&lt;h3 id=&#34;typescript-1&#34;&gt;
+  TypeScript
+  &lt;a href=&#34;#typescript-1&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h3&gt;
+
+&lt;h4 id=&#34;functional-form-1&#34;&gt;
+  Functional Form
+  &lt;a href=&#34;#functional-form-1&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h4&gt;
+
+&lt;div class=&#34;highlight-wrapper&#34;&gt;
+  &lt;div class=&#34;highlight-toolbar&#34;&gt;
+    &lt;span class=&#34;item&#34;&gt;
+      &lt;span class=&#34;label&#34;&gt;Lang:&lt;/span&gt;
+      &lt;span class=&#34;name&#34;&gt;TypeScript&lt;/span&gt;
+    &lt;/span&gt;
+
+
+    &lt;button class=&#34;item right outline brighter hide js-btn-copy-code&#34;&gt;Copy&lt;/button&gt;
+  &lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-TypeScript&#34; data-lang=&#34;TypeScript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;addOne&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;num&lt;/span&gt; : &lt;span style=&#34;color:#66d9ef&#34;&gt;number&lt;/span&gt;)&lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;number&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;num&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// called via
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;addOne&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;);&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;object-oriented-form-1&#34;&gt;
+  Object-Oriented Form
+  &lt;a href=&#34;#object-oriented-form-1&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h4&gt;
+
+&lt;div class=&#34;highlight-wrapper&#34;&gt;
+  &lt;div class=&#34;highlight-toolbar&#34;&gt;
+    &lt;span class=&#34;item&#34;&gt;
+      &lt;span class=&#34;label&#34;&gt;Lang:&lt;/span&gt;
+      &lt;span class=&#34;name&#34;&gt;TypeScript&lt;/span&gt;
+    &lt;/span&gt;
+
+
+    &lt;button class=&#34;item right outline brighter hide js-btn-copy-code&#34;&gt;Copy&lt;/button&gt;
+  &lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-TypeScript&#34; data-lang=&#34;TypeScript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;class&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;numMutator&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#66d9ef&#34;&gt;private&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;addOne&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;num&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;number&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;number&lt;/span&gt; { 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	  &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;num&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&#34;elixir-1&#34;&gt;
+  Elixir
+  &lt;a href=&#34;#elixir-1&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;Want a private in elixir? &lt;code&gt;defp&lt;/code&gt; instead of &lt;code&gt;def&lt;/code&gt;. That&amp;rsquo;s all there is to it.&lt;/p&gt;
+
+&lt;h4 id=&#34;standard-form-1&#34;&gt;
+  Standard Form
+  &lt;a href=&#34;#standard-form-1&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h4&gt;
+
+&lt;div class=&#34;highlight-wrapper&#34;&gt;
+  &lt;div class=&#34;highlight-toolbar&#34;&gt;
+    &lt;span class=&#34;item&#34;&gt;
+      &lt;span class=&#34;label&#34;&gt;Lang:&lt;/span&gt;
+      &lt;span class=&#34;name&#34;&gt;Elixir&lt;/span&gt;
+    &lt;/span&gt;
+
+
+    &lt;button class=&#34;item right outline brighter hide js-btn-copy-code&#34;&gt;Copy&lt;/button&gt;
+  &lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-Elixir&#34; data-lang=&#34;Elixir&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@spec&lt;/span&gt; addOne(integer()) &lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt; integer()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;defp&lt;/span&gt; addOne(num) &lt;span style=&#34;color:#66d9ef&#34;&gt;do&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  num &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# called via&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;addOne(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;one-liner-1&#34;&gt;
+  One Liner
+  &lt;a href=&#34;#one-liner-1&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h4&gt;
+
+&lt;div class=&#34;highlight-wrapper&#34;&gt;
+  &lt;div class=&#34;highlight-toolbar&#34;&gt;
+    &lt;span class=&#34;item&#34;&gt;
+      &lt;span class=&#34;label&#34;&gt;Lang:&lt;/span&gt;
+      &lt;span class=&#34;name&#34;&gt;elixir&lt;/span&gt;
+    &lt;/span&gt;
+
+
+    &lt;button class=&#34;item right outline brighter hide js-btn-copy-code&#34;&gt;Copy&lt;/button&gt;
+  &lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elixir&#34; data-lang=&#34;elixir&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@spec&lt;/span&gt; addOne(integer()) &lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt; integer()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;defp&lt;/span&gt; addOne(num), &lt;span style=&#34;color:#e6db74&#34;&gt;do&lt;/span&gt;: num &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Called via&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;addOne(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&#34;anonymous-functions&#34;&gt;
+  Anonymous Functions
+  &lt;a href=&#34;#anonymous-functions&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;In TypeScript, there is a embraced love for the idea of functions as a first class citizen. something like &lt;code&gt;const addOne = (num) =&amp;gt; num + 1;&lt;/code&gt; can be seen with fairly liberal use. Elixir has a few variations of the same idea, but they are expressed (usually) at very distinct times - mostly expressed in the various standard library functions as additional logic.&lt;/p&gt;
+
+&lt;h3 id=&#34;typescript-2&#34;&gt;
+  TypeScript
+  &lt;a href=&#34;#typescript-2&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h3&gt;
+
+&lt;div class=&#34;highlight-wrapper&#34;&gt;
+  &lt;div class=&#34;highlight-toolbar&#34;&gt;
+    &lt;span class=&#34;item&#34;&gt;
+      &lt;span class=&#34;label&#34;&gt;Lang:&lt;/span&gt;
+      &lt;span class=&#34;name&#34;&gt;TypeScript&lt;/span&gt;
+    &lt;/span&gt;
+
+
+    &lt;button class=&#34;item right outline brighter hide js-btn-copy-code&#34;&gt;Copy&lt;/button&gt;
+  &lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-TypeScript&#34; data-lang=&#34;TypeScript&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;const&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;addOne&lt;/span&gt;(&lt;span style=&#34;color:#a6e22e&#34;&gt;num&lt;/span&gt;) &lt;span style=&#34;color:#f92672&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;num&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;// which is then called via
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;addOne&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;) &lt;span style=&#34;color:#75715e&#34;&gt;// returns 2
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&#34;elixir-2&#34;&gt;
+  Elixir
+  &lt;a href=&#34;#elixir-2&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h3&gt;
+&lt;p&gt;Elixir has two distinct methods of creating anonymous functions, which have different advantages syntactically but little difference from an implementation perspective. Additionally, calling anonymous functions in elixir has a distinct difference from calling regular functions with the addition of a period between the variable name and the parenthesis surrounding the parameters.&lt;/p&gt;
+
+&lt;div class=&#34;highlight-wrapper&#34;&gt;
+  &lt;div class=&#34;highlight-toolbar&#34;&gt;
+    &lt;span class=&#34;item&#34;&gt;
+      &lt;span class=&#34;label&#34;&gt;Lang:&lt;/span&gt;
+      &lt;span class=&#34;name&#34;&gt;elixir&lt;/span&gt;
+    &lt;/span&gt;
+
+
+    &lt;button class=&#34;item right outline brighter hide js-btn-copy-code&#34;&gt;Copy&lt;/button&gt;
+  &lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-elixir&#34; data-lang=&#34;elixir&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;addOne &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;fn&lt;/span&gt; num &lt;span style=&#34;color:#f92672&#34;&gt;-&amp;gt;&lt;/span&gt; num &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# OR&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;addOne &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&lt;/span&gt;(&amp;amp;1 &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# In either case, we then call them via&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;addOne&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;) &lt;span style=&#34;color:#75715e&#34;&gt;# Notice the `.` !&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&#34;closing&#34;&gt;
+  Closing
+  &lt;a href=&#34;#closing&#34; class=&#34;hanchor&#34; ariaLabel=&#34;Anchor&#34;&gt;&lt;/a&gt;
+&lt;/h2&gt;
+&lt;p&gt;Give these a try in your repl and see what you think! In the next section we&amp;rsquo;ll cover control flow TODO - LINK&lt;/p&gt;
+</content>
+    </item>
+  </channel>
+</rss>
