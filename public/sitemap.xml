@@ -2,10 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/readme/</loc>
+  </url><url>
+    <loc>http://localhost:1313/ts_to_ex/00_intro/</loc>
+  </url><url>
+    <loc>http://localhost:1313/ts_to_ex/01_assignment_statements/</loc>
+  </url><url>
+    <loc>http://localhost:1313/ts_to_ex/02_basic_types/</loc>
+  </url><url>
+    <loc>http://localhost:1313/ts_to_ex/03_functions/</loc>
+  </url><url>
     <loc>http://localhost:1313/categories/</loc>
   </url><url>
     <loc>http://localhost:1313/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
+  </url><url>
+    <loc>http://localhost:1313/ts_to_ex/</loc>
   </url>
 </urlset>
