@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Assignments</title>
+  <meta charset="utf-8">
+</head>
+<body>
+  <article>
+    <h1>Assignments</h1>
+    <div class="content">
+      <h1>
+Assignments</h1>
+<h2>
+JavaScript <code class="inline">let</code> assignment</h2>
+<p>
+Starting out with the basics, lets take a look at assigning values to variables. In JavaScript that’s going to look like:</p>
+<pre><code class="typescript">let val : number = 5;</code></pre>
+<p>
+Elixir has a slightly more direct version:</p>
+<pre><code class="elixir">val = 5</code></pre>
+<p>
+few notes</p>
+<ul>
+  <li>
+no keyword for variable declarations in elixir - in this case <code class="inline">let</code>  </li>
+  <li>
+no type options for declaring variables - it is ALWAYS(mostly) an implicit declaration  </li>
+  <li>
+no semi-colons  </li>
+</ul>
+<h2>
+JavaScript <code class="inline">const</code> assignment</h2>
+<p>
+In JavaScript, if you want a variable to stay the same value, slap a <code class="inline">const</code> keyword on it:</p>
+<pre><code class="typescript">const val : number = 5;</code></pre>
+<p>
+Elixir:</p>
+<pre><code class="elixir">val = 5</code></pre>
+<h3>
+Wait, What?</h3>
+<p>
+Yep. You’re reading that correctly - elixir has the same declaration no matter what. The reasoning for this is <em>all</em> variables in elixir are immutable i.e. they can’t be changed, or this is what is advertised. Ergonomically variables in elixir will function similar to how <code class="inline">let</code> works in JavaScript, but behind the scenes elixir makes a copy of a variable, discards the old value, and assigns the new one. This alleviates mutability concerns, but won’t give you the familiar interpreter errors you’re using to seeing with <code class="inline">const</code>. Let me see if I can hack together an example:</p>
+<pre><code class="elixir">val = 5
+
+val = val + 1 #discards the old version of `val`, and creates a new variable named `val` with a value of 6</code></pre>
+<p>
+I’ve seen this described as <code class="inline">labeling</code> by some internet strangers, i.e. the label <code class="inline">val</code> represents the number <code class="inline">5</code>, then the label <code class="inline">val</code> represents the number <code class="inline">6</code> after the second assignment. YMMV, my recommendation is to keep it simple and think about it however fits.</p>
+<h1>
+Conclusion</h1>
+<p>
+Not much to see here. Lets move into each language’s type system to get an idea of what all can be assigned to a variable.</p>
+<p>
+<a href="02_basic_types">Basic Types</a></p>
+
+    </div>
+  </article>
+</body>
+</html>

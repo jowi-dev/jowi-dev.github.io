@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Control Flow</title>
+  <meta charset="utf-8">
+</head>
+<body>
+  <article>
+    <h1>Control Flow</h1>
+    <div class="content">
+      <p>
+As mentioned in the previous post on <a href="link">functions</a>, control flow is where we first start to really feel the difference of thinking elixir vs a C-Style language. Elixir’s control flow can be broken into 5 concepts: <code class="inline">if</code>, <code class="inline">with</code>, <code class="inline">case</code>,  <code class="inline">cond</code>, and as a more general concept, pattern matching.</p>
+<h2>
+If/else/unless</h2>
+<p>
+If statements are pretty much as you’d expect, with a few notable differences</p>
+<pre><code class="typescript">let num = 2;
+if (num === 2){
+  console.log(&quot;2&quot;);
+} else {
+  console.log(&quot;Not 2&quot;);
+}</code></pre>
+<pre><code class="elixir">num = 2
+if num == 2 do
+  IO.puts&quot;2&quot;
+else
+  IO.puts&quot;Not 2&quot;
+end</code></pre>
+<p>
+If/do  and else/end replace brackets for wrapping control.</p>
+<h3>
+Bonus: Ternary</h3>
+<p>
+One thing I (ab)used in TypeScript was the use of the ternary operator. Elixir has its own form.</p>
+<pre><code class="TypeScript">let sheWalkedAwayFromMe = true;
+let age = sheWalkedAwayFromMe ? 23 : 21;</code></pre>
+<pre><code class="elixir">she_walked_away_from_me = true
+age = if she_walked_away_from_me, do: 23, else: 21</code></pre>
+<p>
+If statements, as well as all control flow statements can be used in assignments. For example, we could write the ternary from above in expanded form</p>
+<pre><code class="elixir">she_walked_away_from_me = true
+age = 
+  if she_walked_away_from_me do 
+    23
+  else
+    21
+  end</code></pre>
+<p>
+and <code class="inline">age</code> would be 23. It was hard to wrap my head around that at first, but you’ll find it very useful in some situations.</p>
+<h2>
+with</h2>
+<p>
+With statements… what the hell are they even for really? </p>
+<h2>
+Pattern Matching</h2>
+<h2>
+case</h2>
+<h2>
+cond</h2>
+
+    </div>
+  </article>
+</body>
+</html>
